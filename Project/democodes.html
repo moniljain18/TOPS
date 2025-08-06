@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .product-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card-img-top {
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        .action-btn1 {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .action-btn1:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+        .action-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .product-card:hover .action-btn {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+        .action-btn:hover {
+            background: black;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .action-btn i, .action-btn1 i {
+            color: #333;
+            font-size: 18px;
+        }
+        .action-btn i {
+            color: white;
+        }
+        .add-to-cart-btn {
+            position: relative;
+            z-index: 5;
+            transition: all 0.3s ease;
+            margin: 15px auto;
+            width: calc(100% - 30px);
+            display: block;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #333 !important;
+        }
+        .card-img-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .card-body {
+            padding-bottom: 20px;
+        }
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .card-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4 p-2">
+                <div class="card product-card">
+                    <!-- Heart icon at top right -->
+                    <a href="#" class="action-btn1">
+                        <i class="bi bi-heart"></i>
+                    </a>
+                    
+                    <!-- Image container with search icon overlay -->
+                    <div class="card-img-container">
+                        <img src="https://cdn.shopify.com/s/files/1/0555/8235/9665/files/560DOMECONES_1.jpg?v=1716443947&width=700"
+                            class="card-img-top" alt="Dome Cones">
+                        <a href="#" class="action-btn">
+                            <i class="bi bi-search"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Add to Cart button -->
+                    <button class="btn btn-dark add-to-cart-btn">
+                        <i class="bi bi-cart-plus"></i> Add to Cart
+                    </button>
+                    
+                    <!-- Product details -->
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Dome Cones (Per PC.)</h4>
+                        <div class="card-text text-center">₹69</div>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<div class="container">
+  <div class="row">
+    <!-- Top Row -->
+    <div class="col-md-6 mb-3 mb-md-0">
+      <img src="https://www.niviasports.com/cdn/shop/files/560DOMECONES_6.jpg?v=1716443947&width=700" class="img-fluid" alt="Image 1">
+    </div>
+    <div class="col-md-6">
+      <img src="https://www.niviasports.com/cdn/shop/files/560DOMECONES_6.jpg?v=1716443947&width=700" class="img-fluid" alt="Image 2">
+    </div>
+  </div>
+  
+  <div class="row mt-3">
+    <!-- Bottom Row -->
+    <div class="col-md-6 mb-3 mb-md-0">
+      <img src="https://www.niviasports.com/cdn/shop/files/560DOMECONES_6.jpg?v=1716443947&width=700" class="img-fluid" alt="Image 3">
+    </div>
+    <div class="col-md-6">
+      <img src="https://www.niviasports.com/cdn/shop/files/560DOMECONES_6.jpg?v=1716443947&width=700" class="img-fluid" alt="Image 4">
+    </div>
+  </div>
+</div>
+      
